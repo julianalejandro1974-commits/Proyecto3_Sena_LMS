@@ -1,0 +1,79 @@
+        body {}
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        table {
+            width: 300px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 2px solid #333;
+            padding: 10px;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        section,
+        aside {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .formulario-contacto {
+            max-width: 600px;
+            margin: 40px;
+        }
+
+        h1,
+        h2 {
+            font-family: "Google Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            font-variation-settings:
+                "GRAD" 0;
+        }
+
+        p,
+        ul {
+            font-family: "Google Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            font-variation-settings:
+                "GRAD" 0;
+        }
+
+        nav {
+            font-family: "Google Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            font-variation-settings:
+                "GRAD" 0;
+        }
+
+        legend,
+        label,
+        button {
+            font-family: "Google Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            font-variation-settings:
+                "GRAD" 0;
+        }
