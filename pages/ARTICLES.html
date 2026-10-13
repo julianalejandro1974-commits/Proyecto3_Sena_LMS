@@ -1,41 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Junior Developer</title>
-    <link rel="icon" href="img/Logo.png">
+
+    <link rel="icon" href="../img/Logo.png">
     <link rel="stylesheet" href="../css/cssStyle.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    
+
+   
     <header>
-        <p href="#">Alejandro Saenz </p>
+        <p class="nombre">Alejandro Saenz</p>
+
+       
         <nav>
             <a href="../index.html">Home</a>
             <a href="PROJECTS.html">Projects</a>
             <a href="ARTICLES.html">Articles</a>
             <a href="CONTACTO.html">Contacto</a>
         </nav>
+
+   
+        <button
+            id="dark-mode-toggle"
+            type="button"
+            aria-label="Cambiar tema de la página"
+            aria-pressed="false">
+            🌙 Modo oscuro
+        </button>
     </header>
 
-    <h2 style="margin-top: 80px;">Artículos sobre Software</h2>
+   
+    <main>
+        <h2 class="titulo-articulos">Artículos sobre Software</h2>
 
-<ul>
-    <li>¿Qué es la ingeniería de software?</li>
-    <li>¿Qué es el desarrollo de software?</li>
-    <li>Lenguajes de programación más utilizados</li>
-    <li>¿Qué es la inteligencia artificial?</li>
-    <li>Importancia de las bases de datos</li>
-    <li>Desarrollo de aplicaciones web</li>
-    <li>¿Qué es el software de código abierto?</li>
-</ul>
+        <ul class="lista-articulos">
+            <li>¿Qué es la ingeniería de software?</li>
+            <li>¿Qué es el desarrollo de software?</li>
+            <li>Lenguajes de programación más utilizados</li>
+            <li>¿Qué es la inteligencia artificial?</li>
+            <li>Importancia de las bases de datos</li>
+            <li>Desarrollo de aplicaciones web</li>
+            <li>¿Qué es el software de código abierto?</li>
+        </ul>
+    </main>
+
+    <script src="../js/script.js"></script>
 
 </body>
+</html>
+```

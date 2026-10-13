@@ -1,24 +1,35 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junior Developer</title>
-    <link rel="icon" href="img/Logo.png">
-    <link rel="stylesheet" href="../css/cssStyle.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
 
+    <title>Projects - Junior Developer</title>
+
+    <!-- Icono -->
+    <link rel="icon" href="../img/Logo.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/cssStyle.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <header>
-        <p >Alejandro Saenz </p>
+        <p class="nombre">Alejandro Saenz</p>
+
         <nav>
             <a href="../index.html">Home</a>
             <a href="PROJECTS.html">Projects</a>
@@ -26,39 +37,81 @@
             <a href="CONTACTO.html">Contacto</a>
         </nav>
 
+        <button
+            id="dark-mode-toggle"
+            type="button"
+            aria-label="Cambiar tema de la página"
+            aria-pressed="false">
+            🌙 Modo oscuro
+        </button>
     </header>
-    <table style="margin-top: 80px;">
-        <tr>
-            <th>Projects</th>
-        </tr>
 
-        <tr>
-            <td>HTML Only Portfolio</td>
-        </tr>
+    <main>
 
-        <tr>
-            <td>Calculator</td>
-        </tr>
+        <table class="tabla-proyectos">
+            <thead>
+                <tr>
+                    <th>Projects</th>
+                </tr>
+            </thead>
 
-        <tr>
-            <td>Quiz App</td>
-        </tr>
+            <tbody>
+                <tr>
+                    <td>HTML Only Portfolio</td>
+                </tr>
+                <tr>
+                    <td>Calculator</td>
+                </tr>
+                <tr>
+                    <td>Quiz App</td>
+                </tr>
+                <tr>
+                    <td>Countdown Timer</td>
+                </tr>
+                <tr>
+                    <td>Product Upcoming Page</td>
+                </tr>
+                <tr>
+                    <td>Project Sammy Sports</td>
+                </tr>
+            </tbody>
+        </table>
 
-        <tr>
-            <td>Countdown Timer</td>
-        </tr>
+        
+        <section class="experiencia">
+            <h2>Work Experience</h2>
 
-        <tr>
-            <td>Product Upcoming Page</td>
-        </tr>
-        <tr>
-            <td> Project Sammy Sports</td>
-        </tr>
-    </table>
-    <h2>Work Experience</h2>
-    <p>Fronted-css and bootstrap</p>
-    <a href="https://github.com/julianalejandro1974-commits/sammy_sports" target="_blank" class="boton">view Github</a>
-    <hr style="border: none; height: 3px; background-color: black;">
-    <p>Github Respository</p>
-    <a href="https://github.com/julianalejandro1974-commits" target="_blank" class="boton">view Github</a>
+            <p>Frontend - CSS and Bootstrap</p>
+
+            <a
+                href="https://github.com/julianalejandro1974-commits/sammy_sports"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="boton">
+                View GitHub
+            </a>
+        </section>
+
+        <hr>
+
+        
+        <section class="repositorio">
+            <p>GitHub Repository</p>
+
+            <a
+                href="https://github.com/julianalejandro1974-commits"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="boton">
+                View GitHub
+            </a>
+        </section>
+
+    </main>
+
+    
+    <script src="../js/script.js"></script>
+
 </body>
+</html>
+```

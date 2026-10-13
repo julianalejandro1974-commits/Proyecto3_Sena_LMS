@@ -1,8 +1,44 @@
+:root {
+    color-scheme: light;
+
+    --color-fondo: #ffffff;
+    --color-texto: #030303;
+    --color-borde: #cccccc;
+    --color-acento: #a5610e;
+    --color-superficie: #f5f5f5;
+    --color-hover: #e8e8e8;
+    --color-boton: #222222;
+    --color-texto-boton: #ffffff;
+    --color-texto-secundario: #666666;
+}
+
+
+
+html.dark-mode {
+    color-scheme: dark;
+
+    --color-fondo: #121212;
+    --color-texto: #f1f1f1;
+    --color-borde: #444444;
+    --color-acento: #8ab4f8;
+    --color-superficie: #1e1e1e;
+    --color-hover: #333333;
+    --color-boton: #8ab4f8;
+    --color-texto-boton: #121212;
+    --color-texto-secundario: #bbbbbb;
+}
+
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
 
 body {
     font-family: "Google Sans", sans-serif;
@@ -11,11 +47,29 @@ body {
     font-style: normal;
     font-variation-settings: "GRAD" 0;
 
-    background-color: #ffffff;
-    color: #030303;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     line-height: 1.6;
     padding: 0 5%;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+header,
+main,
+section,
+form,
+table,
+nav a,
+input,
+textarea,
+select,
+button,
+.boton {
+    transition: background-color 0.3s ease, color 0.3s ease,
+                border-color 0.3s ease;
+}
+
 
 
 
@@ -26,12 +80,13 @@ header {
     flex-wrap: wrap;
     gap: 15px;
     padding: 20px 0;
-    border-bottom: 2px solid #222;
+    border-bottom: 2px solid var(--color-borde);
 }
 
 header p {
     font-size: 24px;
     font-weight: 700;
+    margin-bottom: 0;
 }
 
 nav {
@@ -43,50 +98,78 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #060606;
+    color: var(--color-texto);
     font-size: 16px;
     padding: 8px 12px;
     border-radius: 5px;
 }
 
 nav a:hover {
-    background-color: #000000;
-    color: #a5610e;
+    background-color: var(--color-hover);
+    color: var(--color-acento);
 }
+
+
+
+#dark-mode-toggle {
+    padding: 10px 15px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    font-family: "Google Sans", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#dark-mode-toggle:hover {
+    background-color: var(--color-hover);
+    color: var(--color-acento);
+}
+
+#dark-mode-toggle:focus-visible {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 3px;
+}
+
+
 
 
 h1 {
     font-size: 40px;
     font-weight: 700;
     text-align: center;
-    margin-top: 60px !important;
+    margin-top: 60px;
     margin-bottom: 10px;
 }
 
-h1+p {
+h1 + p,
+.subtitulo {
     text-align: center;
-    color: #666;
+    color: var(--color-texto-secundario);
     margin-bottom: 30px;
 }
-
-hr {
-    border: none;
-    height: 2px;
-    background-color: #222;
-    margin: 25px 0;
-}
-
 
 h2 {
     font-size: 28px;
     font-weight: 600;
-    margin-top: 40px !important;
+    margin-top: 40px;
     margin-bottom: 15px;
 }
 
 p {
     margin-bottom: 10px;
 }
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--color-borde);
+    margin: 25px 0;
+}
+
+
+
 
 form {
     display: flex;
@@ -96,9 +179,25 @@ form {
     max-width: 600px;
     margin: 30px auto;
     padding: 20px;
-    background-color: white;
-    border: 1px solid #ccc;
+
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
     border-radius: 8px;
+}
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+    border: none;
+}
+
+form legend {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
 }
 
 form label {
@@ -109,13 +208,15 @@ form input,
 form textarea,
 form select {
     width: 100%;
+    min-width: 0;
     padding: 12px;
+
     font-family: "Google Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "GRAD" 0;
-    border: 1px solid #aaa;
+    font-size: 16px;
+
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
     border-radius: 5px;
 }
 
@@ -126,23 +227,65 @@ form textarea {
 
 form button,
 form input[type="submit"] {
-    background-color: #222;
-    color: white;
+    background-color: var(--color-boton);
+    color: var(--color-texto-boton);
     border: none;
     padding: 12px;
     border-radius: 5px;
     cursor: pointer;
+    font-family: "Google Sans", sans-serif;
+    font-size: 16px;
 }
 
 form button:hover,
 form input[type="submit"]:hover {
-    background-color: #d8b490;
+    opacity: 0.85;
 }
 
+table {
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+}
 
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid var(--color-borde);
+}
+
+th {
+    background-color: var(--color-hover);
+}
+
+tbody tr:hover {
+    background-color: var(--color-hover);
+}
+
+ul {
+    padding-left: 25px;
+    margin: 20px 0;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--color-boton);
+    color: var(--color-texto-boton) !important;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.boton:hover {
+    opacity: 0.8;
+}
 
 @media (max-width: 768px) {
-
     body {
         padding: 0 4%;
     }
@@ -159,7 +302,7 @@ form input[type="submit"]:hover {
 
     h1 {
         font-size: 34px;
-        margin-top: 40px !important;
+        margin-top: 40px;
     }
 
     h2 {
@@ -168,9 +311,7 @@ form input[type="submit"]:hover {
 }
 
 
-
 @media (max-width: 480px) {
-
     body {
         padding: 0 16px;
         font-size: 15px;
@@ -190,13 +331,17 @@ form input[type="submit"]:hover {
         display: block;
         width: 100%;
         text-align: center;
-        background-color: #e8e8e8;
+        background-color: var(--color-superficie);
         padding: 10px;
+    }
+
+    #dark-mode-toggle {
+        width: 100%;
     }
 
     h1 {
         font-size: 30px;
-        margin-top: 30px !important;
+        margin-top: 30px;
     }
 
     h2 {
@@ -206,19 +351,14 @@ form input[type="submit"]:hover {
     form {
         padding: 15px;
     }
-}
 
-.boton {
-    display: inline;
-    background-color: #181818;
-    color: white !important;
-    padding: 10px 22px;
-    border-radius: 6px;
-    font-weight: bold;
-}
+    table {
+        font-size: 14px;
+    }
 
-.boton:hover {
-    background-color: rgb(7, 6, 6);
-    text-decoration: none;
-
+    th,
+    td {
+        padding: 8px;
+        overflow-wrap: anywhere;
+    }
 }
