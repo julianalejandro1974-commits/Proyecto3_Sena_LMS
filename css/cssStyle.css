@@ -1,79 +1,224 @@
-        body {}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+body {
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "GRAD" 0;
 
-        nav {
-            display: flex;
-            gap: 20px;
-        }
+    background-color: #ffffff;
+    color: #030303;
+    line-height: 1.6;
+    padding: 0 5%;
+}
 
-        table {
-            width: 300px;
-            border-collapse: collapse;
-        }
 
-        th,
-        td {
-            border: 2px solid #333;
-            padding: 10px;
-        }
 
-        th {
-            text-align: left;
-        }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 0;
+    border-bottom: 2px solid #222;
+}
 
-        section,
-        aside {
-            background-color: white;
-            padding: 25px;
-            border-radius: 10px;
-        }
+header p {
+    font-size: 24px;
+    font-weight: 700;
+}
 
-        .formulario-contacto {
-            max-width: 600px;
-            margin: 40px;
-        }
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
 
-        h1,
-        h2 {
-            font-family: "Google Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: weight;
-            font-style: normal;
-            font-variation-settings:
-                "GRAD" 0;
-        }
+nav a {
+    text-decoration: none;
+    color: #060606;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
 
-        p,
-        ul {
-            font-family: "Google Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: weight;
-            font-style: normal;
-            font-variation-settings:
-                "GRAD" 0;
-        }
+nav a:hover {
+    background-color: #000000;
+    color: #a5610e;
+}
 
-        nav {
-            font-family: "Google Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: weight;
-            font-style: normal;
-            font-variation-settings:
-                "GRAD" 0;
-        }
 
-        legend,
-        label,
-        button {
-            font-family: "Google Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: weight;
-            font-style: normal;
-            font-variation-settings:
-                "GRAD" 0;
-        }
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 60px !important;
+    margin-bottom: 10px;
+}
+
+h1+p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #222;
+    margin: 25px 0;
+}
+
+
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 40px !important;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+form label {
+    font-weight: 600;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px;
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "GRAD" 0;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form button,
+form input[type="submit"] {
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+    background-color: #d8b490;
+}
+
+
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 0 4%;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    h1 {
+        font-size: 34px;
+        margin-top: 40px !important;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 0 16px;
+        font-size: 15px;
+    }
+
+    header p {
+        font-size: 22px;
+    }
+
+    nav {
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: #e8e8e8;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-top: 30px !important;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    form {
+        padding: 15px;
+    }
+}
+
+.boton {
+    display: inline;
+    background-color: #181818;
+    color: white !important;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background-color: rgb(7, 6, 6);
+    text-decoration: none;
+
+}
